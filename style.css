@@ -1,0 +1,433 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body {
+	height: 100%;
+	overflow-y: auto; /* Enables vertical scrolling */
+}
+
+body {
+	background-color: #20024E;
+	margin: 0;
+	padding: 0;
+	font-family: "Afacad", sans-serif; /* Set default font */
+	position: relative; /* To position the pseudo-elements for the blurred circles */
+	overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.nav {
+	width: 100%;
+	height: 70px;
+	background-color: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+	display: flex;
+	align-items: center;
+	position: sticky; /* Change from fixed to sticky */
+	top: 0; /* Sticks to the top of the viewport */
+	left: 0;
+	z-index: 1000; /* Ensure it's above the circles and other elements */
+}
+
+
+
+/* Logo - Positioned to the Left */
+.logo {
+	font-family: "Anton", sans-serif;
+	color: white;
+	font-size: 23px;
+	position: absolute;
+	left: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Updated Search Container */
+.search-container {
+	display: flex;
+	align-items: center; /* Vertically center the items */
+	background-color: white;
+	opacity: 0.9;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%); /* Centers container */
+	z-index: 1001; /* Make sure search bar is above everything else */
+}
+
+/* Search Icon */
+.search-icon {
+	width: 33px;
+	height: 30px;
+	padding-left: 240px;
+}
+
+/* Cart Icon and Text Container */
+.cart-container {
+	display: flex;
+	flex-direction: column; /* Stack the icon and text vertically */
+	align-items: center; /* Center the items horizontally */
+	position: absolute;
+	right: 200px; /* Position it on the right side of the navbar */
+	top: 50%;
+	transform: translateY(-50%); /* Vertically center the container */
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+	width: 40px;
+	height: 40px;
+	cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Cart Text Styling */
+.cart-text {
+	font-family: "Afacad", sans-serif;
+	font-size: 15px;
+	color: white;
+	margin-top: -1px; /* Adds space between the icon and text */
+	cursor: pointer;
+}
+
+.gopro-container {
+	display: flex;
+	flex-direction: column; /* Stack the icon and text vertically */
+	align-items: center; /* Center the items horizontally */
+	position: absolute;
+	right: 130px; /* Position it on the right side of the navbar */
+	top: 50%;
+	transform: translateY(-50%); /* Vertically center the container */
+}
+
+.gopro-icon {
+	width: 40px;
+	height: 40px;
+	cursor: pointer; /* Indicate it's clickable */
+}
+
+.gopro-text {
+	font-family: "Afacad", sans-serif;
+	font-size: 15px;
+	color: white;
+	margin-top: -1px; /* Adds space between the icon and text */
+	cursor: pointer;
+}
+
+.account-container {
+	display: flex;
+	flex-direction: column; /* Stack the icon and text vertically */
+	align-items: center; /* Center the items horizontally */
+	position: absolute;
+	right: 60px; /* Position it on the right side of the navbar */
+	top: 50%;
+	transform: translateY(-50%); /* Vertically center the container */
+}
+
+.account-icon {
+	width: 40px;
+	height: 40px;
+	cursor: pointer; /* Indicate it's clickable */
+}
+
+.account-text {
+	font-family: "Afacad", sans-serif;
+	font-size: 15px;
+	color: white;
+	margin-top: -1px; /* Adds space between the icon and text */
+	cursor: pointer;
+}
+
+/* Search Bar */
+.searchbar {
+	width: 850px;
+	height: 20px;
+	border: none;
+	outline: none;
+	font-family: "Afacad", sans-serif;
+	font-size: 16px;
+	color: black;
+	text-align: left;
+	padding-left: 10px;
+	background: none;
+}
+
+/* Styling for the circles */
+/* Base circle styling */
+.circle {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(100px);
+	z-index: -2; /* Ensure they stay behind content */
+}
+
+.circle2 {
+	width: 300px;
+	height: 300px;
+	top: -20%;
+	left: 70%;
+	background-color: #F28C0F;
+}
+
+.circle3 {
+	width: 400px;
+	height: 400px;
+	top: 190%;
+	left: 5%;
+	background-color: #D904A0;
+}
+
+.circle4 {
+	width: 400px;
+	height: 400px;
+	top: 50%;
+	left: 66%;
+	background-color: #D904A0;
+}
+
+.circle5 {
+	width: 500px;
+	height: 500px;
+	top: 80%;
+	left: -10%;
+	background-color: #F28C0F;
+	z-index: -1; /* Make sure it's above the other circles */
+}
+
+.circle6 {
+	width: 700px;
+	height: 700px;
+	top: 150%;
+	left: 60%;
+	background-color: #6F04D9;
+	z-index: -1;
+}
+
+.circle7 {
+	width: 500px;
+	height: 500px;
+	top: -10%;
+	left: -5%;
+	background-color: #6F04D9;
+	z-index: -1;
+}
+}
+
+/* Background Container Styling */
+.background-container {
+	position: relative;
+	min-height: 200vh;
+	background-color: #20024E; /* Set your new background color */
+	z-index: -2; /* Pushes it behind the blurred circles */
+}
+
+/* Footer Styling */
+.footer {
+	background-color: #090126;
+	color: white;
+	text-align: center;
+	padding: 40px 0;
+	font-size: 14px;
+	width: 100%;
+	font-family: "Afacad", sans-serif; /* Apply Afacad font */
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-around; /* Distributes columns evenly */
+	max-width: 1200px;
+	margin: auto;
+	flex-wrap: wrap; /* Allows wrapping on small screens */
+	padding-left: 50px;
+}
+
+.footer-column {
+	flex: 1;
+	min-width: 200px;
+	text-align: left;
+	padding: 20px;
+}
+
+.footer-column h3 {
+	font-size: 25px;
+	margin-bottom: 15px;
+	font-weight: 700; /* Makes headings bold */
+}
+
+.footer-column ul {
+	list-style: none;
+	padding: 0;
+}
+
+.footer-column ul li {
+	margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+	color: white;
+	text-decoration: none;
+	opacity: 0.8;
+	font-weight: 400; /* Normal weight for links */
+}
+
+.footer-column ul li a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+	display: flex;
+	gap: 10px;
+}
+
+.social-icons img {
+	width: 250px;
+	height: 75px;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+
+.shop-icons img{
+	width: 1200px;
+	height: 675px;
+	display: block;
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+}
+
+/* Rectangle Container */
+.rectangle-container {
+	position: relative;
+	width: 85%; /* Adjust as needed */
+	height: 600px; /* Adjust as needed */
+	margin: 50px auto;
+	background-color: #21055CFF; /* Semi-transparent background */
+	overflow: hidden; /* Hide anything that goes outside the container */
+	border-radius: 25px; /* Rounded corners */
+	z-index: 1; /* Ensure it's above the background */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Blurred Bubbles */
+.bubble {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(50px); /* Apply blur effect */
+	z-index: -1; /* Keep bubbles behind other content */
+	transition: transform 0.1s linear;
+}
+
+.bubble1 {
+	width: 300px;
+	height: 300px;
+	top: -15%;
+	left: -10%;
+	background-color: #D904A0; /* Red with transparency */
+}
+
+.bubble2 {
+	width: 150px;
+	height: 150px;
+	top: 5%;
+	left: 80%;
+	background-color: #6F04D9; /* Green with transparency */
+}
+
+.bubble3 {
+	width: 250px;
+	height: 250px;
+	top: 70%;
+	left: 65%;
+	background-color: #F28C0F; /* Blue with transparency */
+}
+
+.bubble4 {
+	width: 150px;
+	height: 150px;
+	top: 70%;
+	left: 20%;
+	background-color: #6F04D9; /* Blue with transparency */
+}
+
+.text-content {
+	font-family: "Afacad", sans-serif;
+	font-size: 100px; /* Adjust this value as needed for the size */
+	color: white;
+	position: absolute;
+	left: 100px; /* Position it on the left side */
+	top: 45%; /* Vertically center the text */
+	transform: translateY(-50%); /* Adjust vertical centering */
+	z-index: 1; /* Ensure it's above the bubbles */
+	font-weight: 700; /* Make the text bold */
+	text-shadow: -2px 5px 5px rgba(0, 0, 0, 0.7);
+	line-height: 1.5;
+}
+
+.gamestop-pro {
+	position: absolute;
+	right: 150px; /* Adjust this to move it closer or farther */
+	top: 45%;
+	transform: translateY(-50%); /* Centers the image vertically */
+	height: 375px;
+	width: 375px;
+}
+
+/* Rounded rectangle styling */
+.oval {
+	position: absolute;
+	width: 180px;  /* Adjust width */
+	height: 60px;  /* Adjust height */
+	background-color: #220552; /* Change color as needed */
+	border-radius: 30px; /* Heavy bevel effect */
+
+	/* Centering the text */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Text styles */
+	font-family: "Anton", sans-serif;
+	font-size: 23px;
+	font-weight: normal;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: .8px;
+}
+
+
+
+/* Positioning the rounded rectangles */
+.oval1 {
+	top: 75%;
+	right: 10%;
+	box-shadow: -4px 5px 8px black;
+}
+
+.oval2 {
+	top: 75%;
+	right: 30%;
+	z-index: 999;
+	background-color: #220552; /* Keep the original background */
+	border-radius: 30px; /* Heavy bevel effect */
+	position: absolute;
+	width: 180px;
+	height: 60px;
+
+	/* Gradient outline effect */
+	box-shadow: 0 0 10px 5px rgba(242, 140, 15), /* Orange */
+	0 0 20px 10px rgba(217, 4, 160); /* Pink */
+}
+
+
+
+
+
+
+
+
